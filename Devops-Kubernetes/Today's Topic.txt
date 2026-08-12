@@ -1,0 +1,35 @@
+Kubernates : This is a open source orchestration platform , where automate manage, scaling of containerize application .
+
+pod : pod is a shield or bundle of multiple containers
+
+Take backup of a cluster for use third party app like velero.
+
+                    K8s resource 
+                        |
+                     velero
+                        |
+                        S3
+
+
+kubernate Architecture ::
+-------------------------
+etcd : it brain of cluster,  it managed by cloud . we do not get direct SSH access to etcd, if  we are in cloud .
+
+        we not hit direct command for etcd snapshot
+           - etcdctl snapshot save ...
+
+
+kubelet -> use for communication
+kubeproxy -> use for networking
+CRI(container Runtime Interface) : this is the interface betweeen container runtinme and kubelet
+pod : this is the smallest deployment unit and make container according to yaml file
+
+
+
+
+
+
+
+interview Question
+
+1. what will happen when you lost your master node ?
