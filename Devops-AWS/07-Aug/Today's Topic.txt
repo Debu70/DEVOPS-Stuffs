@@ -1,0 +1,182 @@
+AWS :: Amazon Web Service
+--------------------------
+Cloud Service Models ::
+-----------------------
+IAAS -> Infrastructure as a Service -> add your own operating Service for your own
+PAAS -> Platform as a Service -> already added OS 
+SAAS -> Software as a Service -> already have OS and all access to Application/Software
+
+Cloud Service Provider :: 
+------------------------
+
+AWS -> EC2 :: Elastic Compute Cloud
+Azure -> Azure Virtual Machine
+GCP -> Google compute Engine
+
+AMI :: Amazon Machine Image -> A pre-configured template including OS and Software
+
+Golden Image -> A master template which pre-configured, standardize and security-hardend. This is used in all types of cloud provider.
+
+Golden AMI(Amazon Machine Image) -> A master template which pre-configured, standardize and security-hardend. This is only in Amazon Web Server(AWS).
+
+EC2 :: Elastic Compute Cloud -> Virtual Server in AWS.
+Instance Type -> This is a hardware configuration of a virtual machine.
+	like, 
+		t2.micro, p5.large .....
+
+	t2 series is one cheaper instance type.
+	u7 series is one expensive instance type.
+
+IAM : Identity and Access Management -> 
+---------------------------------------
+
+*IMP* Policies -> is a JSON document that defines what actions are allowed or denied on AWS resources.
+Policy Component ::
+-------------------
+	version
+	statement
+		effect
+		action
+		resource
+
+
+ARN(Amazon Resource Name) -> unique identifier for every AWS resource
+
+IAM Components
+--------------
+  -> IAM User -> individual person who use aws
+  -> IAM group -> make group of multiple users (collection of users)
+  -> IAM Role -> permission to access 
+
+** We attach Roles, on both user and groups . But in AWS , Best practies is attach roles on group that set role to simplifies permissions . **
+
+- MFA(Multi Factor Authentication) :: 
+- Fine Gained Access control : To give permission to group that group have 
+- Least Privilage  
+- Audit of all Users
+
+
+
+VPC(Virtual Private Cloud) :: Create a isolated Network in AWS for resources.
+---------------------------
+
+- Public Subnet
+- Private Subnet
+- Internet gateway
+- NAT Gateway (Network Address Translation) :: Access for 
+
+			     Internet
+				|
+				|
+				|
+				|
+			Internet gateway
+				|
+				|			
+				|
+				|
+			       VPC
+				|
+				|
+				|
+				|
+			  Public Subnet	 -> Contain EC2	
+				|
+				|
+				|
+				|
+			     NAT Gateway  
+				|
+				|    If Authorized 
+				|
+				|
+			 Private Subnet -> Contain EC2
+
+
+		* Vice versa 
+
+
+     **	Internet Gateway depends on Route Gateway.
+     ** But NAT Gateway depends on Internet Gateway.
+
+Route Table :: A Route Table is a set of rules (routes) that tells AWS, where network traffic should go.
+
+what is the difference between VPC Perring and Transit Gateway(Hub and Spoke)?
+- In VPC each communicated with each by a different communication method. But in Transit Gateway One Node is act as a Main Node(Central Hub) and rest other node are act as simple node(spoke), Then all nodes are communicate with each other via main Node(HUB).
+
+S3(Simple Storage Service)::
+----------------------------
+- It is a AWS storage that store and retrieve data/file over the internet .
+
+	Important Terms of S3 ::
+	------------------------
+		1. S3 Bucket :: A container where objects(like, file, images, videos, logs,...) are store
+		2. S3 Object :: An actual file that store in S3 Bucket . 
+		3. S3 Object Key :: The key path/name that identify about specific object.
+
+	Important Features of S3 ::
+	---------------------------
+		1. Scalable :: size of a bucket or storage automatically expand demand on file size 
+		2. Highly Durable :: It is capable for store extreme amount of objects 
+		3. Versioning :: it store multiple versions of a same file
+		4. Life Cycle Policies :: automatically move or delete object by rules.
+		5. Access Control :: this can access by a proper authorized person on rules.
+			like :: IAM policy, bucket Policy, Access Policy, Encryption
+	
+	S3 Storage CLASS ::
+	------------------
+	Storage Class			Typical Use
+	------------			------------
+	S3 Standard			Frequently accessed data
+	S3 Intelligent-Tiering		Unknown/changing access patterns
+	S3 Standard-IA			Infrequently accessed data
+	S3 One Zone-IA			Infrequently accessed, re-creatable data
+	S3 Glacier Instant Retrieval	Archive data needing fast retrieval
+	S3 Glacier Flexible Retrieval	Long-term archive
+	S3 Glacier Deep Archive		Very long-term, rarely accessed archive
+
+
+
+
+
+interview question::
+--------------------
+
+1. what is price related instance model of AWS ?
+	- t2 series is cheaper and u7 series expensive instance type
+2. what is the models of cloud service ?
+	-IAAS
+	-PAAS
+	-SAAS
+3. Internet Gateway vs NAT Gateway ?
+	- Internet Gateway is provide internet connection to the resource under public subents in VPC, while NAT(Network Address Translation) gateway allows to private subnet to initiate unbound internet connection without exposing those resources directly to the internet. The NAT gateway itself placed at public subnet and uses the internet connection through internet gateway.
+4. transit gateway(Hub and Spoke) and VPC peering ?
+- In VPC each communicated with each by a different connection method(One pair of VPCs / Nodes must have Different connection). But in Transit Gateway One Node is act as a Main Node(Central Hub) and rest other node are act as simple node(spoke), Then all nodes are connected with each other via main Node(HUB).
+5. The NAT Gateway present Where ?
+	1. Public Subnet  (Correct)
+	2. Private Subnet
+6. Component Of AWS VPC ?
+	1. Inetrnet
+	2. Internate Gateway
+	3. Public subnet -> along with EC2s
+	4. NAT Gateway
+	5. Public Subnet -> along with EC2s
+	6. Route Tables
+7. VPC Peering ?
+- In VPC each communicated with each by a different connection method(One pair of VPCs / Nodes must have Different connection)
+8. How many VPC will Created For a Region?
+	Answer :: 5 VPCs
+
+
+
+
+
+
+
+
+
+
+
+
+
+

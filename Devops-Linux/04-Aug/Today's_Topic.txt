@@ -1,0 +1,62 @@
+Linux command::
+----------------
+		command
+		   |
+		   |(Multiple commands)
+		   |
+		 Script	
+ 		   |
+		   |(Multiple Scripts)
+		   |
+		Programme
+                   |
+		   |(Multiple Programmes)
+		   |
+	       Application
+
+1. cut -d: -f1 /etc/passwd -> To get all  Users
+
+2. getent passwd | wc -l -> to get total numbers of users in Number Value
+
+3. useradd <user_name> -> to create a new user
+	- if you have not root then add in cmd. "SUDO" rest this cmd. on top
+
+**** awk -F: '$3 >= 1000{print $1}' /etc/passwd -> get only users	
+
+4. sudo useradd <user_name> : create that user if you have root permission or not
+
+5. sudo passwd <user_name> : To add password to a new user
+
+6. what is jump server or Bastion Host
+
+7. How to generate public key and private key
+
+8. Login user without password using public and private key
+
+9.chown <CHANGE_OWNER_NAME> <EXISTING_FILE/DIRECTORY_NAME> -> change owner name of EXISTING_FILE
+
+10. sudo -i -> to switch own user to root user
+
+11. chown <CHANGE_OWNER_NAME> : <CHANGE_GROUP_NAME><EXISTING_FILE/DIRECTORY_NAME> -> change owner name of EXISTING_FILE
+
+12. umask <SET_YOUR_OWN_STRING_PARAMETER_PERMISSION> -> set own string parameter
+
+13. sed -i '$r <content_file>' <content_file> -> append the content of that file
+with itself
+14. tar -cvzf <NEW_FILE_NAME> <ORIGINAL_FILE_NAME> -> compress file into huge size file to some most less size file.
+    tar -xvzf <NEW_FILE_NAME> <ORIGINAL_FILE_NAME> -> extract file into huge size file to some most less size file.
+15. hostname -> get hostname which identify with system/network
+
+
+
+
+interview quetion ::
+--------------------
+
+1. what is diffrence between sed cmd. vs awk cmd. ?
+
+
+
+
+
+

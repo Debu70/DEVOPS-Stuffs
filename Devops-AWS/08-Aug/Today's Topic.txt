@@ -1,0 +1,180 @@
+1. Landing Zone :: Pre-configured ready made and secure environment
+
+		*** Security Purpose ***
+
+2. AWS Control Tower:: It manages all security purpose on landing zone(s).
+
+	it configure all the necessary services on landing zone. Like EC2, VPC, IAMs etc .... 
+	
+
+		AWS Control Tower  
+			|
+			|
+			|		
+			|
+		  Landing Zone (s)
+			|	
+			|		
+			|	
+			|
+		   Account Factory
+
+3. Account Factory : To make new AWS User Account
+
+4. Preventive and Detective 
+   ------------------------
+   Preventive :: Stop the problem before it happens. 
+   Defective :: find the problem after or while it happen
+
+5. SCP(Service Control Policy) :: It set the all kind of permission to AWS account and organizational unit that can have.
+
+S3 :: Simple Storage Service -> This is a virtual storage thtat all ind of folder and files on cloud.
+
+1. S3 Versioning :: Keep multiple versions of a same file in a bucket
+
+2. Delete and Permanent Delete :: It work while S3 Versioning is enabled 
+   ---------------------------
+	- Delete ::if we hit delete option over some object, then it is not delete permanently, but it make a delete marker of that object so the we retrieve that object.
+	
+	- Permanent Delete :: if we hit permanent delete then that object is delete permanently, so that we can't retrieve it.
+
+Session Manager : It allows to use securely and manage EC2 instance without needing SSH key.
+----------------
+
+
+		  System Manager
+			^
+			|	
+			|		
+			|	
+			|
+		 Session Manager
+			
+
+SSM(System Manager) Connection :: this a type of agent that run on EC2 and communicate with System Manager.
+
+
+Route 53 : DNS service for routing traffic to resources
+----------
+
+1. Hosted Zone : is a container that store the information about our route (IP Address)
+
+	2 Types of Hosted zone::
+		-> private
+		-> public
+2. Tags : A unique identifier about all component that assign with a specific tag .
+
+Component/Team/Department of Tags :
+---------------------------------
+	-Product
+	-Application
+	-Team
+	-Owner
+	-Environment
+	-Severity
+
+	*** It depends on Organization to Organization.
+	    Based on scale, Teams etc...    ***
+
+	example:: 
+	--------
+		1. Developing Team
+		2. Quality Analysing(QA) Team
+		3. Share Quality Analysing(SQA) Team
+		4. User Acceptance Test(UAT) Team
+		5. Staging Team
+		6. Production Team
+
+
+Automatically Build Component::
+-------------------------------
+1.Routing Type (NS(Name Space), SOA(Start Of Authority), CNAME, MX for mail)
+	--
+
+2. ***IMP*** Routing Policy :: 
+	- Simple Routing
+	- Weighted Routing
+	- Latency
+	- Geo-Location
+	- failover
+		-Primary     (First Try)  then
+		-Seconday    (Second Try if primary fail)
+	-Multivalue answer
+	
+
+3. Alias Record :: A Temporary / Other Kind of Name Where it tends to Route 53.
+
+** Industry Practice **
+4. if we delete a resource after some time/day then provide the name of that service like, "<resource_name>-to-be-delete"
+
+Cloud Trail: 
+------------
+- Monitor and record/Track of User activity and API Usage
+
+Cloud Watch : Monitor Resource and Application
+------------
+	- add cloud-watch agent to monitor cloud instances
+	- cloud trail give the logs to cloud watch
+
+Auto Scaling : Automatically adjust the application on demand
+------------
+	- At most 
+	- At least
+
+** Important **	
+Lambda :: serverless compute service that lets run code without managing servers .
+	  Run code and response to service 
+
+	Execution Time of Lambda per invocation ::
+	----------------------------------------
+		Minimum : 1 second
+		Default : 3 Seconds
+		Maximum : 900 seconds / 15 minutes
+
+
+interview Question ::
+----------------------
+
+1. how you add permission in multiple users at a time ?
+- By add permission on control tower , so that automatically permission added in all user which associated with Landing zone.
+
+2. How to find SSM Agent in a EC2 Instance by cmd?
+3. Difference type of Routing Types ?
+	-A
+	-AAAA
+	-CNAME
+	-MX
+	-TXT
+
+	....etc
+4. How you consider which cloud service will user your necessity ?
+- Based on Region 
+
+5. Edge Location ?
+- small isolated location fetch some Frequently asked request from main/origin or central region location .  
+
+
+6. CDN vs cloud font vs Edge Location ?
+-
+	CDN(Content Delivery Network) - is content
+	cloudfront - use AWS's Content
+	Edge Location - small isolated location that fetch FA request from origin
+
+7. Multivalue Answer vs Weighted in Routing Policy ?
+ 	- Weighted = "How much traffic should go to each resource?"
+	- Multivalue Answer = "Give me multiple healthy IP addresses."
+8. Preventive and Detective
+
+9. What is by default execution time for lambda price ? 
+	Lambda concept		Default/limit
+	Default timeout		3 seconds
+	Maximum timeout		15 minutes
+	Billing granularity	1 millisecond
+
+
+
+
+
+
+
+

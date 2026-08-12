@@ -1,0 +1,117 @@
+Bash Scripting + Real-World Skills (Interview Relevant)
+-------------------------------------------------------
+
+         *** Scripting / Script file generate with ".sh" extension. ***
+
+
+
+1. Orphan Process :: that process has finished executing but its entry still exists in the process table. Because Parent process is not cotllected its exit status. (Parent Process kill, But child process exists.)
+
+2. Zoombie Process :: The child process is killed but wait for parent process exist status. 
+
+3. Run level :: Define the state or operating mode of the system.
+
+Runlevel	Meaning
+0	        Shutdown the system
+1	        Single-user mode (Maintenance/Rescue mode)
+2	        Multi-user mode (varies by distribution)
+3	        Multi-user mode with networking, no GUI
+4	        Unused / Custom
+5	        Multi-user mode with networking and GUI
+6	        Reboot the system
+
+        cmd = init n (this command use for specific woek)
+
+                     . .
+                      .      n -> tends to 0 to 6 (Run Level)
+
+4. Hard link and Soft link -> 
+
+5.  shebang -> #!/bash/bin :: execute in bash Shell
+
+6. E325 Error :: 
+
+7. echo "Hello" -> that print in cli
+
+        name="Debu"
+        echo "Hello $name"
+        ---> Hello Debu
+
+        path="/var/lib"
+        echo "path in : $path"
+        ---> path in: /var/lib
+
+8. echo "Hello" > text.txt :: this command use for creating a file with add hello in it.
+
+9. echo "append Text" >> text.txt :: append this text in echo , append with previous content of that file
+
+10. file Descriptor :: A non-negetive value hat Linux assigns to every open file, device, socket, or input/output stream . 
+            0 -> receive normal file
+            1 -> display nirmal output
+            2 -> display Error
+
+            cmd :: 
+
+ 
+11. rm .file.txt : delete hidden file
+
+12. exit codes :: 
+        0 -> Success
+        Non-zero (1 - 255) -> Special case or error occure while execute
+
+        $? -> check previous command run Successfully or not 
+                in bash
+                    -> mkdir 1
+                    ->echo $?
+                    --- 0            (Success)
+
+                    -> ddfd
+                    ----ddfd: command not found
+                    ->echo $?
+                    ----127          (Not Success / Error code generate)
+ 
+13. more like $? ->
+
+14. sed cmd :: 
+        - replace String
+
+            bash
+                ->touch apple.txt
+                ->vim apple.txt
+
+                the color of apple is red
+                ~
+                ~
+                :wq
+                -> cat apple.txt
+                --- the color of apple is red
+                -> sed "s/red/green"            (replace red to green)
+                -> cat apple.txt
+                --- the color of apple is green
+
+
+
+
+Interview questions ::
+---------------------
+
+1. What is file descriptor ?
+
+2. why we use std.... ?
+
+3. sed vs awk ?
+
+4. find cmd ?
+
+
+
+
+
+
+
+
+
+
+
+
+

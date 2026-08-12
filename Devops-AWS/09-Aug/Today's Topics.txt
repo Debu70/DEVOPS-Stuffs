@@ -1,0 +1,101 @@
+      ****  AWS Security Topics with some key points ****
+
+AWS Shield:: DDoS(Distributed Denial of Service) protection for AWS Services .
+----------
+
+- Its free in AWS Service . 
+- Its protect for CloudFront, Rout 53, ELB(Elastic Load Balancing).
+- 24/7 service to protect and message
+
+
+AWS WAF(Web Application Fierwall) : This filter the unwanted web request/ Traffic . 
+----------------------------------
+- Protect against SQL Injection and XSS(Cross-Site Scripting) .
+- Automate Security by using AWS Lambda .
+
+    Example :: To ensure disable Routes From Russia origin to own region . 
+
+Amazon GaurdDuty: Threat detection service for AWS Environment . 
+-----------------
+- continously working
+- identify Authorization User and give access 
+
+Amazon Incepctor : Automated Vulnarbilitiies manangement over AWS Environment .
+-----------------
+
+CVEs(Common vulnerability and Exposures) -> This is uniqe id/name to every vulnerability.
+
+CVSS(Common vulnerability Scoring System) -> A score showing to a vulnerability severity . 
+    - score tends to 0 - 10 .
+
+- Amazon EventBridge : Event Routing Service . It Receives Events and send them to correct Target . 
+-----------------------
+
+        *** Key Management ****
+
+AWS KMS(Key Management Service) : Manage encryption key and store within AWS . 
+                                 - -- Its free in AWS to create keys
+-------------------------------
+
+Symmetric -> Same key for both encrypt and decrypt
+Asymetric -> Both public key and Private key
+
+- Key Rotation -> after a period of time it automatically update key.
+- Provide centerlize Management of 
+Cloud trail(Store logs and changes in AWS) and 
+cloud watch(Monitor over resources and Application) .
+
+Amazon System Manager(SSM) : Automates operational tasks and manage AWS Infrastructure(Services) . 
+----------------------------
+
+- suppourt remote permission for EC2 Servies.
+
+
+Amazon RDS(Relational Database Service) : Manage Relation Database service various types of Database on AWS . 
+-----------------------------------------
+
+        - SOL Database (MySQL, PostgreSQL ....)
+        - Non-SQL Database(Nosql, MongoDB, MariaDB)
+
+    CRUD or CURD Operation ::
+    -------------------------
+        C - Create 
+        R - Read
+        U - Update
+        D - Delete
+
+
+Amazon Aurora :: Work with High profermance RD with SQL DB.
+------------
+
+        - Amazon Aurora is high performance  5xMySQL and 2XPostgreSQL 
+
+Amazon Dynamo Database :: work with NoSQL database and it much faster than Aurora.
+------------------------
+    - low latency than Aurora
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Interview Questions::
+------------------------
+1. SQL Injection vs XSS(Cross-Site Scripting) ?
+2. Step Funtion vs SQS vs SNS vs EventBridge vs Word Memory?
+3. Amazon MACIE ?
+4. AWS Config vs AWS MACIE ?
+5. Varios kind of AWS Security Tools ?
+6. RSA_2048 vs RSA_4096 ?
+7. Realational and non Realational Database ?
+
+
+

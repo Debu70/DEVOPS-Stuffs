@@ -1,0 +1,86 @@
+Linux command::
+----------------
+ *  How to build a EC2 instance by using Terraform.
+	- first write respective .tf (SCRIPT FOR CREATE EC2 INSTANCE)
+	-terraform init
+	-terraform plan
+	-terraform apply
+	-terraform destroy
+
+	by a single click 
+	-terraform apply -auto-approve
+*  ps -> to check running process.. get Process Id
+
+*  kill <process id > : to kill particular process which running on respective process id.
+
+*  pkill "<process_name>" : delete process according to Process name
+
+
+
+
+1. grep "<Directory/file.EXTAINTION>" -> To search file or dir
+   		attributes::
+		-------------
+			-i -> ignore case sensitive
+			-v -> display non match / ignore that kind of part
+			 E -> to search multiple things
+			etc...
+	grep -iv running|stoped|Terminated -> get 
+   pgrep "<process_name>" -> get process name as respective process_name
+
+   egrep "<Directory/file.EXTAINTION>"
+	*** egrep with attribute ****
+
+	***   grep is case sensitive ****
+
+    egep "<Directory/file.EXTAINTION>|<Directory/file.EXTAINTION>|<Directory/file.EXTAINTION>" 
+
+2. ls -la | wc -l -> get total number of output of "ls -la" .Return in Integer
+3. ipconfig -> get Private IP
+4. ping
+5. telenet
+6. How to DROP a cmd
+7. wget -> to download something
+8. curl -> to communicate with web server ans (Request, Response)
+**** Run Levels ***
+9. init 6 -> to reboot a service  (make sure you are in root user ... for go to root user run "sudo su")
+10. echo "<something write to print in cli>" -> print your logs in cli
+11. cat /etc/hosts -> 
+	cat /etc/fstab ->
+12. less
+13. .bash_history file in root
+14. if you unknowingly add your password in your ssh cmd then you need to delete that command history then you do this, 
+					--- you present in your own service-----
+						-> cat ~./bash_history
+							....
+							...
+							...
+							...          (These are the previous cmds you are execute)
+							...
+							...
+							...
+							...
+						-> vim ~./bash_history
+							::: Now you delete your sensitive parts and save it by ":wq"
+
+15. systemctl restart <service_name> :: to restart a service
+	1. start :: To start a service
+	2. restart :: To restart a service
+	3. enable :: to enable a service
+	4. disable :: to disable a service
+	5. is-enable :: to check a service is enable or disable
+	6. list-units :: list all running service
+	7. list-ubit-files :: list all install service
+		** and attribute **
+	8. --type = services :: get service type
+						
+
+interview Quetion ::
+---------------------
+
+1. wget vs curl
+2. what are run level in linux ? : init "n"  :: n = 0 to 6
+3. what is shebang cmd. ?
+4. where the logs are store ?
+Answer:: 
+5.cron job ?

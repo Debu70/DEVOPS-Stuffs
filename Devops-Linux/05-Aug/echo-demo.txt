@@ -1,0 +1,4 @@
+echo"Name of file: $0"
+echo "Check Current Working Directory"
+pwd
+echo "----------------------------------"

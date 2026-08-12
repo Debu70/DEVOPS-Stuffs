@@ -1,0 +1,87 @@
+Some Basic Linux command::
+
+    /home/debu/
+        |-Devops
+            |-Devops-linux
+                |-02-Aug
+                |-03-Aug
+                |-04-Aug
+                |-05-Aug
+                |-06-Aug
+                .
+                .
+
+
+1. mkdir <1st folder name> <2nd folder name> <3rd folder name> <4th folder name>  -> make multiple folder / Directory on pwd on a sing command
+
+2. - Abosulte path :: is the complete path to a file or directory starting from the root directory  
+   - Relative Path :: is a path relative to your current working directory
+
+                 
+
+3. top -> to check current state of system including cpu, memory, load and at that time   running process
+ on top line :: Load Avg: 4.78 4.76 5.96
+
+                    4.78 → Average load over the last 1 minute
+		    4.76 → Average load over the last 5 minutes
+		    5.96 → Average load over the last 15 minutes
+
+4. head <file.ext> : get first 10 lines in cli
+5. tail <file.ext> : get last 10 lines in cli
+
+	*** By default line number is 10. ***
+
+    to customize line no.
+6. head -n 5 <file.ext> / head 5 <file.ext> : get first 5 lines in cli
+7. tail -n 5 <file.ext> / tail 5 <file.ext> : get last 5 lines in cli
+
+8. find -> find a specific file in pwd
+        find -name <expression>
+            e.g.
+		Name attribute::
+		----------------
+                find . -name "n" -> ERROR :: ambigeous state
+                find . -name "n*" -> get file starts with n
+                find . -name "*n" -> get file ends with n
+                find . -name "*n*" -> get file starts and ends with n
+	**** find with -name attribute is a case-sensitive cmd ***
+		
+		Type attributes::
+		----------------
+		1. find . -type d -name <expression> -> to find only name of DIRECTORY by respective exp.
+		2. find . -type f -name <expression> -> to find only name of FILE by respective exp.
+
+		Size attribute::
+		----------------
+		1. find . -type f -name "*.log" size +50M -> this command get some .log file which size more than 50MB
+		2. find . -type f -name "*.log" -size +40M -size -55M -> this command get some .log files which size more than 40MB and less than 55MB
+
+		
+		
+        ::disk fragement::
+9.  df -h -> disk fragement
+    df -hi -> inode part 
+
+	in the above two Linux cmd difference is in " du -hi " generate inode part 
+(In this showing how many file entries is free in system) and " du -h " generate storage space part (In this showing how many storage space is free in system)
+        ::disk USAGE::
+10. du -h -> this is used for get directory/folder size
+11. du -ah -> this is use for both directory and file size
+12 free -h -> this is for check system memory and swap usage
+
+
+
+
+
+
+
+
+
+
+Interview Question ::
+1. By run 'top' command get tasklist of running application, but in upper line Load Avg is shown like Load Avg: 4.78 4.76 5.96 . what is mean of that line ?
+Answer :: Load Avg: 4.78 4.76 5.96
+	They are for three different time periods.
+                    4.78 → Average load over the last 1 minute
+		    4.76 → Average load over the last 5 minutes
+		    5.96 → Average load over the last 15 minutes

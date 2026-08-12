@@ -1,0 +1,138 @@
+Git or Github :: Git is Distributed Version Control
+----------------
+
+
+1. Git cloan :: For New / original
+2. Git pull ::  for updated files 
+
+3. Git branch <new_branch_name> ::   
+4. git checkout <new_branch_name> :: 
+
+        ** Common Command for 3 and 4 **
+       ->  git checkout -b <new_branch_name>
+** git init :: this initialize that folder into a git new Repository and add a hidden folder named as .git
+5. git add <file_name>:: this is ude for only , if chnge in only in one file
+6. git add . :: add all/multiple modify files into stage area
+7. git commit -m "<msg regarding about changes>" ::
+   git status :: this get 
+8. git push ::
+9. git add * :: add all modify files with :: ignore hidden files
+
+        ** Best practice for indusries **
+
+        1. git pull
+        2. git checkout -d <new_branch_name>
+        3. git add .
+        4. git push
+
+        5. git pull :: fetch previous merged files to local
+
+ 10. git merge conflict :: 
+        WARNING :: 
+            1. Accept current change
+            2. Accept incoming changes
+            3. Accept both change
+
+    >>>>>>>>>>>>>>>incoming change
+    <<<<<<<<<<<<<<<changes
+            < :: conflict mark/symbol
+                    we delete it manually ***
+
+            **** EC2 ****
+11. yum install git -> sudo yum install git :: install git package in EC2 instance  (Yum in EC2 and apt in Ubuntu)
+12. git config --global user.name "priyabrata"
+13. git config --global user.email "priyabrata@oathnex.com
+
+14. git rm --cached <WHICH_FILE_YOU_WANT_TO_REMOVE_FROM_git add> ::
+15. git restore <NEW_CHANGES_FILE> :: to dicard presentchange into file
+    
+16. git log :: to see commit history with commit_id
+17. git show :: to display detailed information about a git object
+
+
+
+
+
+
+
+
+
+
+Interview Qustion::
+1. What a same file can be present in both commited file or not yet commited file ?
+Answer :: Yes, 
+    Justify :: if i write some changes in a file and the "git add ."
+        and after git add i will change it once the if i write git  
+        status" , then that same file will appear in both stages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

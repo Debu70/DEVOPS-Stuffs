@@ -1,0 +1,65 @@
+Amazon Redshift : Manage dataware house service for running complex query
+-----------------
+
+- Provide fast SQL-based query with structured dataware
+- Integrate with AWS Analytics service like Glue , EMR . 
+
+AWS DMS(Database Migration Service): This migrate the database to AWS with minimal downtime.
+-------------------------------------
+
+- 
+
+
+AWS Batch : Efficiently runs batch proccessing workload at Scalable
+-----------
+
+- this is use EC2 spot instance for cost Efficient
+
+
+AWS Glue : Serverless 
+
+AWS EFS(Elastic File System) : Scalable file storage for EC2 instances and no permises resources.
+------------------------------
+
+- Share file storage in AWS
+- Multiple EC2 can access 
+
+AWS Elastic Beanstalk : Platform as a service(PAAS) for deploying and managing application
+----------------------
+
+AWS CloudFront : content delivery network(CDN) for faster content delivery
+---------------
+
+AWS Snowball : this is a physical data transferservice to moving large amount of data in EC2 instances
+-------------
+
+    Snowball Family
+    ----------------
+    1. SnowCone
+    2. SnowEdge
+    3. SnowMobile
+
+AWS Code Pipeline : continous integration and delivery service for automated reult
+------------------
+
+
+AWS CodeBuild : Manage build services to compile source file 
+automated
+---------------
+
+AWS CodeDeploy : 
+
+AWS X-RAY : Tracing service for debugging and analyse microservise application .
+-----------
+- it help to monitoring and trobolshooting 
+
+
+
+
+Interview Questions :
+----------------------
+1. What is 7Rs in cloud migration ?
+2. AWS CDC(Change Data Capture) 
+3. EBS VS EFS VS NFS ?
+4. Rolling vs Blue/Green vs Canary ?
+5. AWS inspector vs Trivy ?

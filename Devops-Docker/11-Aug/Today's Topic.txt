@@ -1,0 +1,104 @@
+Monolethic application
+Microservice application
+
+
+Docker : Docker is a open source platform that allows the developer to perform automate the deployment , scaling and management of application inside lightweight, portable container. 
+
+container : this is a isolated , self-contained environment tha t include everything an applicaton need to run like: code, libraries, dependencies and system tools.
+
+- Isolation - The containerize application wont interfer with other application which running on system.
+
+DockerFile : This is a Script for use to create a docker image.
+    - it contain : 
+        - base image 
+        - copy application code into image
+        - how to install dependencies
+        - what command to run when the container start
+    
+    Example : 
+        FROM node:10 -> base image
+ 
+        WORKDIR /user/pathnex -> pwd of system code
+         
+        COPY . . -> copy pwd to container pwd
+
+        RUN npm install -> install node/base package
+
+        Expose 3000 -> port number
+
+        CMD["npm", "start"] -> run command for start container
+
+
+Docker image : Docker image  is a read-only template that contain the code, runtime, libraries, environment variables and configuration file need to run an application . images are use to create container .
+
+Docker Base image : Docker base image is a starting image that docker image is bult on. All docker pre-built and custom images are stored in Docker Directory .
+
+    Example : 
+        FROM node:10   -> node is the base image
+
+Docker Engine : this is a core compotent that run the container.
+    - This is a client-server application
+    - Three major component - 
+        - Docker Deamon(dockerd) : the backgrounf=d service that managers container, images, network, volumes .
+                - this is outdated now , but instead of we use containerd.
+        - Docker CLI(Command Line Interface) : That interface interact with docker deamon.
+        - REST API : Allow external program to interact with docker and manage container
+
+
+Docker Compose - this is use for running multi-container docker application. this ia a simple YAML file with many docker services with their relationship, network, volume.
+
+        Example : 
+
+            ```YAML
+
+            version: '2'
+            services:
+                web:
+                    image: nginx
+                    ports:
+                        - "8080:80"
+                db:
+                    image: mySQL
+                    environment: 
+                        MYSQL_ROOT_PASSWORD: root
+
+
+Docker Registry : It stores the docker images. Docker Hub is most popular public registry . 
+
+Networking : This is use for build communication with containers .
+
+        - Network Type : 
+        -----------------
+            - Bridge : default
+            - Host : 
+            - Overlay : 
+            - None : 
+
+docker volume : volumes are act as a storage in container.
+
+Docker Swarm : this is a docker's native orchestration tool that manage cluster of docker hosts .
+
+
+
+
+Docker Storage Type
+
+sudo usermod -aG docker SUSER - Give root permision to current to perform docker command with out sudo
+
+
+interview Question
+------------------
+
+1. VM(Virtual Machine) vs Containerzation
+2. if linux container can run in window or viceversa ?
+3. why container are light weight ?
+    - Because it use host kernal 
+4. OCPY vs CMD vs RUN vs ENTRYPOINT
+5. Type of docker network
+6. if same volume can mounted by multiple container ?
+    - Yes
+7. Docker Swarm vs Kubernates
+8. Docker Deamon
+9. docker prune  
+10. how you optimize docker image size   
+11. multistage Dockerfile
