@@ -5,20 +5,20 @@ Kubernates : This is a open source orchestration platform , where automate manag
 kubernate Architecture ::
 -------------------------
  - There are TWO main components in Kubernates Architecture    
-      - Control panel -> Is the brain of kubernates that managing and controlling the kubernates cluster.
-      - Worker node -> is the take responsible for running and the application pods and containers.
+      - Control Plane -> Is the brain of kubernates that managing and controlling the kubernates cluster.
+      - Worker node -> is the take responsible for running the application pods and containers.
 
-      In Control Panel there is several components like
-            - cloud-controller-manager -> this is a component that establish communication between kubernate eith cloud-provider-api. This manage cloud specific integration only like cloud resources, networking, load balancer and nodes . 
+      In Control Plane there is several components like
+            - cloud-controller-manager -> this is a component that establish communication between kubernate with cloud-provider-api. This component manage cloud specific integration only like cloud resources, networking, load balancer and nodes . 
             - kube-api-server -> This component act as main Entry point and communication hub of kubernate.
-            - kube-controller-manager -> this component run many controllers like node controller, replicas controller..ect and then these controllers are continously monitor work of cluster and match actula state with desire state.
-            - kube-scheduler -> this is a component of cotrol panel of kubernate Architecture , it select the suitable worker node for newly created pods.
-            - etcd -> this is the brain of control panel , that stores the key-value as cluster's state and configuration .
+            - kube-controller-manager -> this component run many controllers like node controller, replicas controller..ect and then these controllers are continously monitor work of cluster and match actual state with desire state.
+            - kube-scheduler -> this is a component of cotrol Plane of kubernate Architecture , it select the suitable worker node for newly created pods.
+            - etcd -> this is the brain of control Plane , that stores the key-value data as cluster's state and configuration .
 
       In Worker node there is several components like
             - kubelet -> this is a agent that run in every worker node and communicate with API server and receive pods specification and ensure that pod is running or healthy
-            - kubeproxy -> this is work on every worker node and it helps to networking route traffic to appropriate pods.
-            - pod -> Pod ia smallest deployment unit that contain one or more containerize application that communicate, share storage and resource with each other.
+            - kubeproxy -> this is work on every worker node and it helps to networking route service traffic to appropriate pods.
+            - pod -> Pod is a smallest deployment unit that contain one or more containerize application that communicate, share storage and resource with each other.
             - CRI(Container Runtime Interface) -> this is the interface that allows kubelet to communicate with running containerize application that CRI-O(OCI -> Open Container Initiative) and containerd(after 1.23 Version).
 
 
