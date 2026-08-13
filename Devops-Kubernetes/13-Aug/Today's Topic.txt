@@ -1,0 +1,83 @@
+EKS : 
+-----
+
+1. Kubernats Cluster creation
+2. Kubernets Version    
+    - Standard (14 month)
+    - Extended (26 month)
+
+    Update cycle K8s cluster lifecycle
+
+3. 
+
+Node == VM == VM ia manage by EC2 Instance
+
+Auto Scalling Group
+    -> Instances
+
+Daemon Set
+
+Resourse = pod
+
+desire is important
+
+--------------------------NOTES----------------------------
+
+Some Key component of Kubernets ::
+---------------------------------
+
+Namespace : 
+    Namespace are use to divide cluster resoureces into separate virtual environment within the same Kubernates cluster.
+
+    it Helps in ::
+        - Organiging Resourses
+        - Isolating Appliction
+        - Managing access and Quotas
+        - Suppourting Multi-Team and Multi-projrct environment
+
+
+Services : 
+    Services establish communication between different components in kubernets cluster.
+    this provide:
+        - a stable IP
+        - a DNS name
+        - Load Balancing across multiple pods
+
+ReplicaSets: 
+    Replicasets ensure that the specific number of pods are running any given time.
+    it works with deployment to manage pods and health of applications.
+
+Deployments :
+    Deployments in Kubernates are manage the group of pods and control their lifecycle.
+    A Deployment Provides: 
+        - Scalling
+        - Rolling Update
+        - Rollback
+
+
+DaemonSets : 
+    DaemonSets ensure that the particular pod is run in specific nodes.
+    it commonly used for logging,monitoring or networking agent .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Interview Quetion ::
+---------------------
+1. Authentication and authorization 
+2. Cost efficient based on Kubernates Version ? 
+3. cost efficiency based on EBS and snapshot ?
+4. HPS vs VPS in Kubernates ?
+5. What is Scale-up and Scale-down ?
+6. What is Scale-in and Sclae-out ?

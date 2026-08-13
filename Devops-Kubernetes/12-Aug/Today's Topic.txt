@@ -29,7 +29,7 @@ Take backup of a cluster for use third party app like velero.
 
                     K8s resource 
                         |
-                     velero
+                     velero    (have backup)
                         |
                         S3
 
