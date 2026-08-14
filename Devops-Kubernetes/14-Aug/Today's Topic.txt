@@ -1,0 +1,96 @@
+"terraform -auto-approve" must avoid in production.
+
+Jumpserver/Bastion host
+
+install kubrctl, kubens, kubectx download
+curl - 
+
+kubeconfig file
+
+create a access key in AMI
+
+aws configure cmd - 
+
+kubeconfig file created by ami key 
+
+kubectl get node -> TO show worker node only
+            but if you are in cloud -> then you will get bost master node and worker node
+
+Jumpserver <-> EKS -> by private IP
+
+kgn(kubectl get nodes) cmd -> alias kgn = "kubectl get nodes"
+kgp(kubectl get pods) cmd -> alias kgp = "kubectl get pods"
+
+kubens "<namespace_name>" : change name_space name , by default in default
+    -> kubens -n "<namespace_name>"
+    -> kubens -A 
+
+****imp***
+kubectl get all -> get 
+kubectl get all -A
+
+kubectl get deployments
+kubectl get rs
+kubectl get pods
+kubectl get daemonset
+
+kubctl get "<pod_name>" -o yaml
+kubctl describe "<pod_name>" 
+
+if pod_name followed by one random number - controlled by : Daemon SET
+
+
+
+
+
+
+
+
+interview Que. : 
+-------------------
+
+1. How to connect 
+2. How many default VPC will can create in one region?
+   - 5 as default
+3. default NameSpace ?
+    - default
+    - kube-system
+    - kube-node-lease
+    - kube-public
+
+    - kube external-dns -> create by on external dns creation
+4. Service and type ?
+    - clusterIP
+    - nodeport
+    - loadbalancer
+    - ExternalName
+
+5. Types of Routing ?
+
+    - Path based
+    - Host Based
+
+6. OSI Model layer ?
+    
+    - Physical Layer        |
+    - Data layer            |
+    - networking layer      |
+    - transport Layer       |       TOP TO BOTTOM
+    - seesion layer         |
+    - presentaion layer     |
+    - Application Layer     |
+
+7. NLB(Network Load Balancer) and ALB(Application Load Balancer) ?
+
+
+
+
+
+
+
+
+
+
+
+
+
