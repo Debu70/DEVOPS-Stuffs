@@ -1,0 +1,34 @@
+EBS CSI Service AdON 
+
+type of pull policy
+
+crictl -> to search an image from node
+
+kubectl cordon node_name -> to block schedule
+kubectl drain node_name
+
+maximum search
+maximum unavaliable
+minimum available
+
+PDB
+IRSA = IAM Roles for Service Accounts.
+
+
+control plane in odd number because noc conflict issue occure
+
+pod affinity
+pod antiaffinity
+
+Node Affinity
+
+Node - Taint
+pod tolerant
+
+
+Node Taint - No Schedule :: in control plane(Node)
+
+
+Labels and Selector
+
+PV vs PVC vs StorageClass
