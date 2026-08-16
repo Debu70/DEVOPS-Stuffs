@@ -1,0 +1,51 @@
+
+Kuberenates TroboolShoot Cmd : 
+
+1. kubectl describe "context"
+2. kubectl log "context"
+3. kubectl events "context"
+
+
+depends_on{} in add-on file
+
+pod state :: .
+    - Pending 
+    - Running
+    - Success/faild
+
+resources watch cmd ::
+    kubectl get pod -w     . -w is use for watch
+
+delete resources::
+----------------
+
+kubectl delete
+
+OIDC
+
+IAMServiceAccount
+
+VPC ID
+
+Kubernetes Probe
+------------------
+
+1. Startup 
+2. Liveness
+3. Readiness
+
+delete terraform file
+    - terraform destroy
+
+delete manually volumes, target volume, load balancer
+
+
+
+Interview Questions:
+1. How many nodes in a cluster ?
+    - It's a variable number , but it is more than node
+2. How many Pods in a nodes ?
+    - It's is a variable number , but is less than cluster
+3. Service Account ?
+4. Architechure of Kubernetes Cluster ?
+    -:: Internet -> Application Load Balancer -> Ingress-> Application
