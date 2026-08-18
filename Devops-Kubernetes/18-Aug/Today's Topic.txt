@@ -20,4 +20,45 @@ two main important file
 1. chart.yaml
 2. value.yaml
 
-6:55
+Version change config
+--------------------
+
+1. major version
+2. minor version
+3. patch Version
+
+    ex :: 1.35.6
+
+        major Version . minor version . patch version
+             1               35              6
+
+
+
+helm list :: it ensure that how many file install in k8s
+
+        -A :: for all namespace
+
+helm repo add - add or download something to app
+
+helm repo update - update up to date version 
+
+helm repo list - ensure that the hoemany charts are added
+
+helm install :: install the charts in k8s cluster
+
+helm upgrade :: it upgrade the version which already contain in a perticular namespace . and namespace define is mandatory
+
+helm rollback <release_name> <revision> ::
+
+helm history <release_name> -n <namespace> :: 
+
+
+
+interview Question ::
+-----------------------
+
+1. what is _helpers.tpl file ?
+    - this is a toolbox for helm. ANd for code reusability this file use like if we have common things in more templates we can write it in _helper.tpl file so we reuse that values .
+
+2. what is indicate _ in helpers.tpl file ?
+    - It indicate that "Dont't create a kubernetes file from this directory . "
