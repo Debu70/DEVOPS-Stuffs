@@ -1,0 +1,23 @@
+kubectx - 
+
+kgp -A -o wide
+
+apipa ip
+
+resource and limit (Resource Quota)
+--------------------
+        applicable for CPU and RAM 
+
+resouce - set the normal or minimum configuration
+
+limit - set the at most limit , limit is always maximum than resource
+
+*********HELM**********
+
+contain common thing
+
+two main important file
+1. chart.yaml
+2. value.yaml
+
+6:55
