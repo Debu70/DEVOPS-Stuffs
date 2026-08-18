@@ -38,6 +38,7 @@ kubctl get "<pod_name>" -o yaml
 kubctl describe "<pod_name>" 
 
 if pod_name followed by one random number - controlled by : Daemon SET
+if pod_name followed by Two random number - controlled by : Replica SET
 
 
 

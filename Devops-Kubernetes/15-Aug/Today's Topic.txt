@@ -11,7 +11,7 @@ maximum search
 maximum unavaliable
 minimum available
 
-PDB
+PDB 
 IRSA = IAM Roles for Service Accounts.
 
 
@@ -23,7 +23,7 @@ pod antiaffinity
 Node Affinity
 
 Node - Taint
-pod tolerant
+pod -  tolerant
 
 
 Node Taint - No Schedule :: in control plane(Node)
